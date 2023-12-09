@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITMS01</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <header>
+        <h1>CALCULATOR</h1>
+    </header>
+
+    <section id="main-menu">
+        <h2>Main Menu</h2>
+        <p>Choose an option below:</p>
+        <button onclick="showSubMenu('permutation')">Calculate Permutation and Combination</button>
+        <button onclick="showSubMenu('sequence')">Sequence Calculator</button>
+        <button onclick="showSubMenu('factorial')">All around Factorial Calculator</button>
+        <button onclick="displaySurprise()">Click for a Surprise!</button>
+    </section>
+
+    <section id="permutation" style="display: none;">
+        <h2>Compute for Permutation or Combination</h2>
+        <label for="n">Enter the value for n:</label>
+        <input type="number" id="n">
+        <label for="r">Enter the value for r:</label>
+        <input type="number" id="r">
+        <button onclick="computePermutation()" class="button-1">Compute Permutation</button>
+        <button onclick="computeCombination()" class="button-1">Compute Combination</button>
+        <div class="resultBox">
+            <div class="result" id="permutationResult"></div>
+            <div class="result" id="combinationResult"></div>
+        </div>
+    </section>
+
+    <section id="sequence" style="display: none;">
+        <h2>Compute for Sequence</h2>
+        <label for="sequenceType">Choose a sequence type:</label>
+        <select id="sequenceType">
+            <option value="lucas">Lucas Sequence</option>
+            <option value="fibonacci">Fibonacci Sequence</option>
+            <option value="tribonacci">Tribonacci Sequence</option>
+        </select>
+        <label for="nSequence">Enter the value for n:</label>
+        <input type="number" id="nSequence">
+        <button onclick="computeSequence()" class="button-1">Compute Sequence</button>
+        <div class="resultBox">
+            <div class="result" id="sequenceResult"></div>
+        </div>
+    </section>
+
+    <section id="factorial" style="display: none;">
+        <h2>All around Factorial Calculator</h2>
+        <label for="numFactorial">Enter a number:</label>
+        <input type="number" id="numFactorial">
+        <button onclick="computeFactorial()" class="button-1">Compute Factorial</button>
+        <div class="resultBox">
+            <div class="result" id="factorialResult"></div>
+        </div>
+    </section>
+
+    <section id="surprise" style="display: none;">
+        <h2>Surprise!</h2>
+        <button onclick="displaySurprise()">Click for a Surprise!</button>
+        <div id="surpriseContainer">
+            <div class="resultBox">
+                <div class="result flashy" id="surpriseResult">The best ma'am Dhiwata, goddess, of all Mathematicians!</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h1 >GROUP MEMBERS</h1>
+        <ol>
+            <li>Mhillet Angeles</li>
+            <li>Ferdjan Cabuntog Bote jr</li>
+            <li>Jamir Korn Ramos Nieto</li>
+            <li>Vincent Ramos</li>
+            <li>Juan Miguel Torres</li>
+        </ol>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1"></script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
